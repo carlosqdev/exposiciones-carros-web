@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exposiciones de vehículos</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Exposición de vehículos</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#cars">Inicio</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Visitas
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal" href="#">Comentarios</a></li>
+                <li><a class="dropdown-item" href="#">Reportes</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Autor</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class="container my-5">
+    <section id="cars" class="wrapper">
+      <div class="card" style="width: 18rem;">
+        <img src="./img/tesla-model-s.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Tesla models S</h5>
+          <p class="card-text">El Tesla Model S es un liftback eléctrico de alta gama. Este modelo sigue el plan de negocio de Tesla Motors para expandir su mercado hacia vehículos más asequibles.</p>
+          <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Comentar</a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img src="./img/tesla-model-3.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Tesla model 3</h5>
+          <p class="card-text">El Tesla Model 3 es una berlina de dimensiones compactas y 100% eléctrica del segmento D, fabricada por Tesla desde 2016.</p>
+          <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Comentar</a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img src="./img/tesla-model-x.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Tesla Model S</h5>
+          <p class="card-text">El Tesla Model X es un SUV completamente eléctrico, del segmento E, fabricado por Tesla desde 2016, con enfoque Premium y con posibilidad de acomodar hasta siete personas.</p>
+          <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Comentar</a>
+        </div>
+      </div>
+    </section>
+    <section class="container my-5">
+      <div class="">
+        
+      </div>
+    </section>
+  </main>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Nuevo comentario</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Nombre</label>
+          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Escribe tu nombre">
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label">Comentario</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
