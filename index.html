@@ -8,6 +8,9 @@
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/styles.css">
   <script src="js/bootstrap.bundle.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
@@ -32,7 +35,7 @@
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Autor</a>
+              <a class="nav-link active" aria-current="page" data-bs-toggle="modal" data-bs-target="#autorModal" href="#">Autor</a>
             </li>
           </ul>
         </div>
@@ -66,10 +69,13 @@
         </div>
       </div>
     </section>
-    <section class="container my-5">
-      <div class="">
-        
-      </div>
+    <section id="ListMessages" class="container my-5 listMessages">
+      <!-- <div class="message">
+        <div class="message-body">
+          <h4 class="message-body_userName">Carlos Quintero</h4>
+          <p class="message-body_content">Nicaragua se ha ganado el voto de Mexico. Gracias al cocainomano de Juan Carlos</p>
+        </div>
+      </div> -->
     </section>
   </main>
 <!-- Modal -->
@@ -82,20 +88,36 @@
       </div>
       <div class="modal-body">
         <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">Nombre</label>
-          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Escribe tu nombre">
+          <label for="nombre" class="form-label">Nombre</label>
+          <input type="text" class="form-control" id="nombre" placeholder="Escribe tu nombre">
         </div>
         <div class="mb-3">
-          <label for="exampleFormControlTextarea1" class="form-label">Comentario</label>
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          <label for="mensaje" class="form-label">Comentario</label>
+          <textarea class="form-control" id="mensaje" rows="3"></textarea>
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="save">Guardar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal autor -->
+<div class="modal fade" id="autorModal" tabindex="-1" aria-labelledby="autorModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="autorModalLabel">Autor</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h4>Carlos Alberto Quintero Paisano.</h4>
+        <p>Estudiante de: Ingeniería de Sistemas</p>
       </div>
     </div>
   </div>
 </div>
 </body>
+<script src="./js/main.js"></script>
 </html>

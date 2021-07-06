@@ -4,10 +4,43 @@
   gap: 10px;
   align-items: center;
 }
+.listMessages {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: space-between;
+}
+.container .message {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 270px;
+  border-radius: 30px;
+  background-color: #e9e9e9;
+  border: 1px solid #bbbbbb;
+}
+.container .message .message-body {
+  padding: 20px;
+  padding-bottom: 0px;
+}
+.container .message .message-body_userName, .message-body_content {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  text-align: left;
+}
+.container .message .message-body_content {
+  font-weight: 400;
+}
+
 
 @media screen and (min-width: 1024px) {
   .container .wrapper {
     flex-direction: row;
     justify-content: space-between;
+  }
+  .container .message {
+    width: 400px;
   }
 }
